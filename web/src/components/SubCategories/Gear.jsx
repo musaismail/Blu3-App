@@ -67,8 +67,8 @@ const Gear = ({getSubCategory}) => {
             setId(lists.id)
             setSubcategories(lists.type)
             console.log("click is working")
-           }}  className={`${id=== lists.id ? "h-[180px] w-[140px] bg-gradient-to-tr from-[#5CEF99] to-[#3D54FF]":
-            "w-[135px] h-[170px] bg-[#FCFFFD] shadow-sm"} focus:outline-0 flex flex-col items-center justify-center 
+           }}  className={`${id=== lists.id ? "h-[150px] w-[120px] sm:w-[135px] sm:h-[170px] bg-gradient-to-tr from-[#5CEF99] to-[#3D54FF]":
+            "h-[150px] w-[120px] sm:w-[135px] sm:h-[170px] bg-[#FCFFFD] shadow-sm"} focus:outline-0 flex flex-col items-center justify-center 
            rounded-[20px] tranform duration-500`}>
             <img src={lists.img} alt="flowers" className='w-[92px] h-[83px] rounded-full border-[1px] border-[#707070]' />
             <h2 className='pt-[8px] font-bold'>{lists.type}</h2>

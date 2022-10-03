@@ -84,7 +84,7 @@ function Searchproduct({ name }) {
   return (
     <div className=" ">
       <input
-        className="w-[315px] h-[44px] focus:outline-0 border-[2px]  border-[#3D54FF] ml-[30px] rounded-3xl mt-4 pl-[30px] pr-[20px]"
+        className="w-[210px] sm:w-[315px] h-[44px] focus:outline-0 border-[2px]  border-[#3D54FF] ml-[30px] rounded-3xl mt-4 pl-[30px] pr-[20px]"
         placeholder="Search"
         value={searchTerm}
         type="text"
@@ -102,7 +102,7 @@ function Searchproduct({ name }) {
                 handleClick(id);
                 setId(id);
               }}
-              className={`w-[315px] h-[90px] rounded-[30px] ml-[20px] ${
+              className={`w-[280px] sm:w-[315px] h-[90px] rounded-[30px] ml-[20px] ${
                 id === Id
                   ? "bg-[#172EDB] text-[#ffff]"
                   : "bg-gradient-to-tr from-[#ffff] to-[#7081FE]"

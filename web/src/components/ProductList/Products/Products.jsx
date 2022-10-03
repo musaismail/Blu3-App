@@ -56,6 +56,13 @@ function Products() {
   const [showItem, setShowItem] = useState(false);
   const [Id, setId] = useState("");
   
+   
+
+ 
+  
+  
+ 
+ 
   const handleClick = (id) => {
     const selectedItem = data[id];
    localStorage.setItem("my_clickedproduct", JSON.stringify(selectedItem));
@@ -69,31 +76,37 @@ function Products() {
       <>
         <div className="flex justify-center">
       <div>
+        
         {
-        data.map(({ id, image, title, price, payment_status }) => (
-          <button key={id}  onClick={() => {
-            handleClick(id);
-            setId(id);
+        data.map((t,i) => (
+          <div className='relative' key={t.id} >
+          <button   onClick={() => {
+            handleClick(t.id);
+            setId(t.id);
           }}
-          className={`w-[315px] focus:outline-0 h-[90px] rounded-[30px] ml-[20px] ${
-            id === Id
+          className={` w-[280px] sm:w-[315px] focus:outline-0 h-[90px] rounded-[30px] ml-[20px] ${
+            t.id === Id
               ? "bg-[#172EDB] text-[#ffff]"
-              : "bg-gradient-to-tr from-[#ffff] to-[#7081FE]"
+              : "bg-gradient-to-tr from-[#ffff] to-[#7081FE] " 
           } 
           mb-4  flex justify-center items-center pt-3`}>
             <div>
-              <img className="w-[76px] h-[43px] object-none mx-[17px]" src={image} alt={title} />
+              <img className="w-[76px] h-[43px] object-none mx-[17px]" src={t.image} alt={t.title} />
             </div>
-
+          
             <div>
-              <p className="font-[Segoe UI] text-[11px] mb-[5px] font-black">{title}</p>
-              <p className="font-[Segoe UI] w-[197px]  text-[11px] mb-[5px] font-normal mr-2">price: {price}</p>
-              <p className="font-[Segoe UI] w-[197px]  text-[11px] mb-[5px] font-normal mr-2">payment status: <p className='inline-block text-[#F7FF00]'>{payment_status}</p></p>
+              <p className="font-[Segoe UI] text-[11px] mb-[5px] font-black">{t.title}</p>
+              <p className="font-[Segoe UI] w-[197px]  text-[11px] mb-[5px] font-normal mr-2">price: {t.price}</p>
+              <p className="font-[Segoe UI] w-[197px]  text-[11px] mb-[5px] font-normal mr-2">payment status: <p className='inline-block text-[#F7FF00]'>{t.payment_status}</p></p>
             </div>
-          </button>
+           
+           </button>
+           </div>
         ))
       }
-      <div className=' text-center'><button onClick={() => setShowItem(true)} className='w-[207px] h-[58px] bg-gradient-to-b from-[#7384FE] to-[#A8A8A8] text-[25px] text-center text-[#FFFFFF] rounded-full font-semibold'>Pay Now</button></div>
+      
+      <div className=' text-center'><button onClick={() => setShowItem(true)} className='w-[180px] sm:w-[207px] h-[58px] bg-gradient-to-b from-[#7384FE] to-[#A8A8A8] 
+      text-[25px] text-center text-[#FFFFFF] rounded-full font-semibold'>Pay Now</button></div>
       </div>
     </div>
       </>
