@@ -1,16 +1,11 @@
 import React from "react";
 
 const Favorite = () => {
-  var favList = [{}];
   const getArray = JSON.parse(localStorage.getItem("favorite") || "0");
-  for (var i = 0; i < getArray.length; i++) {
-    let x = getArray[i];
-    favList[i] = JSON.parse(localStorage.getItem("favItem" + [x]) || "{}");
-  }
-
+  console.log(getArray);
   return (
     <div>
-      {favList.map((favproduct, i) => (
+      {getArray.map((favproduct, i) => (
         <div key={i}>
           <div>{favproduct.image}</div>
 

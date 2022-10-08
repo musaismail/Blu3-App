@@ -127,8 +127,8 @@ const Homepage = () => {
                 }}
                 className={`${
                   id === results.id
-                    ? "w-[80px] h-[50px] sm:w-[100px] sm:h-[62px] drop-shadow-[0px_9px_4px_rgba(23,255,120,0.3)] border-[2px] border-[#3d54ff] "
-                    : "w-[80px] h-[50px] sm:w-[102px] sm:h-[64px] "
+                    ? "w-[80px] h-[170px] sm:w-[100px] sm:h-[120px] drop-shadow-[0px_9px_4px_rgba(23,255,120,0.3)] border-[2px] border-[#3d54ff] "
+                    : "w-[80px] h-[170px] sm:w-[102px] sm:h-[124px] "
                 } ml-[30px]  
                  flex flex-col  items-center mt-[38.1px] justify-center  transform duration-200  bg-white rounded-[12px]`}
               >
@@ -152,15 +152,7 @@ const Homepage = () => {
       {id === 6 ? <Gear getSubCategory={getSubCategory} /> : " "}
       {id === 7 ? <Flowers getSubCategory={getSubCategory} /> : " "}
       {id === 8 ? <Vapes getSubCategory={getSubCategory} /> : " "}
-
-      <div className="flex justify-end pt-[50px] ml-[20px] m-5">
-        <div className="flex items-center justify-center w-[50px] h-[50px] bg-[#3D54FF] rounded-full">
-          <Link to="/searchproductlist">
-            <BsFillArrowRightCircleFill className="text-center w-[25px] h-[25px] text-[#FFFFFF]  " />
-          </Link>
-        </div>
-      </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between mb-3 mt-4">
         <div className=" ml-[20px] m-5">
           <div className="flex items-center justify-center w-[50px] h-[50px] bg-[#3D54FF] rounded-full">
             <Link to="/likeproductlist">
@@ -172,6 +164,15 @@ const Homepage = () => {
             </Link>
           </div>
         </div>
+
+        <div className=" ml-[20px] m-5">
+          <div className="flex items-center justify-center w-[50px] h-[50px] bg-[#3D54FF] rounded-full">
+            <Link to="/searchproductlist">
+              <BsFillArrowRightCircleFill className="text-center w-[25px] h-[25px] text-[#FFFFFF]  " />
+            </Link>
+          </div>
+        </div>
+
         <div className=" ml-[20px] m-5">
           <div className="flex items-center justify-center w-[50px] h-[50px] bg-[#3D54FF] rounded-full">
             <Link to="/productlist">
