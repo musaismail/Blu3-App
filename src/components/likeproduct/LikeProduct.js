@@ -79,11 +79,11 @@ function LikeProduct() {
     setFavorite([...array]);
     localStorage.setItem("favorite", JSON.stringify(favorite));
 
-    var storage = localStorage.getItem("favItem" + props.t || "0");
+    var storage = localStorage.getItem("favItem" + props.poduct || "0");
     if (storage == null) {
-      localStorage.setItem("favItem" + props.t, JSON.stringify(props.t));
+      localStorage.setItem("favItem" + props.product, JSON.stringify(props.t));
     } else {
-      localStorage.removeItem("favItem" + props.t);
+      localStorage.removeItem("favItem" + props.product);
     }
   };
 
